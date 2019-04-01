@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 import LandingPage from "./Components/Table/LandingPage";
 import AddRecord from "./Components/Operations/AddRecord";
-import DeleteRecord from "./Components/Operations/EditRecord";
+import DeleteRecord from "./Components/Operations/DeleteRecord";
 import EditRecord from "./Components/Operations/EditRecord";
 import UploadRecord from "./Components/Operations/UploadRecord";
 import "react-table/react-table.css";

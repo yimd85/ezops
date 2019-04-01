@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/all', async (req, res) => {
-    const values = await pgClient.query(`SELECT * from ezops WHERE active =true`);
+    const values = await pgClient.query(`SELECT * from ezops ORDER BY id ASC`);
     res.send(values.rows);
 });
 
@@ -38,11 +38,31 @@ app.get('/edit', async (req, res) => {
     res.send(values.rows);
 });
 
-app.get('/delete', async (req, res) => {
+app.delete('/delete', async (req, res) => {
     console.log('tests',req.query.id)
     const values = await pgClient.query(`DELETE FROM ezops WHERE id = ${req.query.id}`);
     res.send(values.rows);
 });
+
+app.put('/editing', async (req, res) => {
+    console.log('tests',req.body)
+    const first_name = req.body.params.first_name;
+    const last_name = req.body.params.last_name;
+    const alcohol = req.body.params.alcohol;
+    const tabacco = req.body.params.tabacco;
+    const id = req.body.params.id;
+    
+    const values = pgClient.query(
+        `UPDATE ezops SET first_name = '${first_name}',  last_name = '${last_name.toString()}', alcohol = ${alcohol}, tabacco = ${tabacco} WHERE id = ${id}`
+    );
+    res.send(values.rows);
+});
+
+
+// UPDATE ezops SET david = first_name WHERE id = 4
+// UPDATE table_name SET column_name1 = new_value1;
+// UPDATE book SET price = 19.49 WHERE price = 25.00
+
 
 app.post('/addrecord', async (req, res) => {
     console.log('testing for req.body',req.body)

@@ -6,9 +6,9 @@ export default class BackButton extends React.Component {
 
     render() {
         return (
-            <Link style={{ color: '#337ab7' }} className="" to={'/'}>
-                    <Button style={{marginBottom: '10px'}}>
-                        Go Back
+            <Link className="" to={'/'}>
+                    <Button className="btn btn-secondary" style={{marginBottom: '10px'}}>
+                        Back
                     </Button>
             </Link>
         )

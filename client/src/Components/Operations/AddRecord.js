@@ -69,7 +69,7 @@ class AddRecord extends React.Component {
                     onChange={() => this.setState({ tabacco: !this.state.tabacco }) } 
                 />
             </Form.Group>
-            <Button type="submit" value="Submit" >Save User</Button>
+            <Button className="btn btn-secondary" type="submit" value="Submit" >Save</Button>
         </Form>
         </div>
     );
