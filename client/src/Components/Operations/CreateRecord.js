@@ -1,9 +1,6 @@
 import React from "react";
-import { makeData  } from "./Utils";
-import { BrowserRouter as Router, Route, Link} from 'react-router-dom';
-import columns from './columns';
-import ReactTable from "react-table";
 import "react-table/react-table.css";
+import BackButton from './BackButton';
 
 class CreateRecord extends React.Component {
   state = {}
@@ -11,6 +8,7 @@ class CreateRecord extends React.Component {
 
     return (
       <div style={{margin: '30px'}}>
+      <BackButton />
         Test
       </div>
     );
