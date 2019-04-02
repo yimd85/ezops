@@ -12,7 +12,8 @@
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
-    "react-table": "^6.9.2"
+    "react-table": "^6.9.2",
+    "react-minimal-pie-chart": "3.5.0"
   },
   "scripts": {
     "start": "react-scripts start",
